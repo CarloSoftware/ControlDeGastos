@@ -3,11 +3,11 @@
   <persistence-unit name="PANALPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>modelo.Rol</class>
-    <class>modelo.Persona</class>
     <class>modelo.Ingreso</class>
     <class>modelo.Categoria</class>
-    <class>modelo.Egreso</class>
+    <class>modelo.Persona</class>
     <class>modelo.Usuario</class>
+    <class>modelo.Egreso</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bd_panal?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

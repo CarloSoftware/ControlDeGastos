@@ -34,9 +34,9 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Persona.findByApellido", query = "SELECT p FROM Persona p WHERE p.apellido = :apellido")
     , @NamedQuery(name = "Persona.findByCedula", query = "SELECT p FROM Persona p WHERE p.cedula = :cedula")
     , @NamedQuery(name = "Persona.findByDireccion", query = "SELECT p FROM Persona p WHERE p.direccion = :direccion")
-    , @NamedQuery(name = "Persona.findByCorreo", query = "SELECT p FROM Persona p WHERE p.correo = :correo")
     , @NamedQuery(name = "Persona.findByEdad", query = "SELECT p FROM Persona p WHERE p.edad = :edad")
-    , @NamedQuery(name = "Persona.findByGenero", query = "SELECT p FROM Persona p WHERE p.genero = :genero")})
+    , @NamedQuery(name = "Persona.findByGenero", query = "SELECT p FROM Persona p WHERE p.genero = :genero")
+    , @NamedQuery(name = "Persona.findByCorreo", query = "SELECT p FROM Persona p WHERE p.correo = :correo")})
 public class Persona implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -53,12 +53,12 @@ public class Persona implements Serializable {
     private String cedula;
     @Column(name = "Direccion")
     private String direccion;
-    @Column(name = "Correo")
-    private String correo;
     @Column(name = "Edad")
     private Integer edad;
     @Column(name = "Genero")
     private String genero;
+    @Column(name = "Correo")
+    private String correo;
     @OneToMany(mappedBy = "idPersona")
     private List<Ingreso> ingresoList;
     @OneToMany(mappedBy = "idPersona")
@@ -113,14 +113,6 @@ public class Persona implements Serializable {
         this.direccion = direccion;
     }
 
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
     public Integer getEdad() {
         return edad;
     }
@@ -135,6 +127,14 @@ public class Persona implements Serializable {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     @XmlTransient

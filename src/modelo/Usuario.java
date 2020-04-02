@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")
     , @NamedQuery(name = "Usuario.findByIdUsuario", query = "SELECT u FROM Usuario u WHERE u.idUsuario = :idUsuario")
     , @NamedQuery(name = "Usuario.findByUsuario", query = "SELECT u FROM Usuario u WHERE u.usuario = :usuario")
-        , @NamedQuery(name = "Usuario.findByValidar", query = "SELECT u FROM Usuario u WHERE u.usuario = :usuario and u.clave = :clave")
+    , @NamedQuery(name = "Usuario.findByValidar", query = "SELECT u FROM Usuario u WHERE u.usuario = :usuario AND u.clave = :clave")
     , @NamedQuery(name = "Usuario.findByClave", query = "SELECT u FROM Usuario u WHERE u.clave = :clave")})
 public class Usuario implements Serializable {
 
@@ -40,9 +40,9 @@ public class Usuario implements Serializable {
     @Basic(optional = false)
     @Column(name = "id_Usuario")
     private Integer idUsuario;
-    @Column(name = "usuario")
+    @Column(name = "Usuario")
     private String usuario;
-    @Column(name = "clave")
+    @Column(name = "Clave")
     private String clave;
     @JoinColumn(name = "id_Persona", referencedColumnName = "id_Persona")
     @ManyToOne

@@ -117,7 +117,7 @@ public class A_Loguin extends javax.swing.JFrame {
         panelLoguin.add(barraProgreso);
         barraProgreso.setBounds(10, 260, 140, 14);
 
-        labelFondoLoguin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Loguin.png"))); // NOI18N
+        labelFondoLoguin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Loguin.jpg"))); // NOI18N
         labelFondoLoguin.setMaximumSize(new java.awt.Dimension(366, 386));
         labelFondoLoguin.setMinimumSize(new java.awt.Dimension(366, 386));
         labelFondoLoguin.setPreferredSize(new java.awt.Dimension(366, 386));
